@@ -1,12 +1,14 @@
 import Sidebar from 'components/Sidebar'
+import SidebarResponsive from 'components/SidebarResponsive'
 
 import React, {useEffect} from 'react'
 
 const PrivateLayout = ({children}) => {
   return (
-    <div className=' flex w-screen h-screen'>
+    <div className=' flex flex-col md:flex-row w-screen h-screen'>
       <Sidebar/>
-      <main className=' flex w-full overflow-y-scroll items-center justify-center'>{children}</main>
+      <SidebarResponsive/>
+      <main className=' flex overflow-y-scroll items-center justify-center w-full'>{children}</main>
     </div>
   )
 }
